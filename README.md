@@ -63,10 +63,11 @@ where:
 - $\sigma(r_i)$ is the sample standard deviation of daily excess returns.
 - $T$ is the number of observations.
 
-Two-sided 95% confidence intervals are constructed using the standard normal critical value:
+Two-sided 95% confidence intervals are then constructed using the standard normal critical value:
 
 $$
-CI_{95\%} = \bar{r}_i \pm 1.96 \cdot SE(\bar{r}_i)
+CI_{95\%} =
+\bar{r}_i \pm 1.96 \cdot SE(\bar{r}_i)
 $$
 
 These intervals illustrate the statistical uncertainty surrounding historical expected-return estimates.
@@ -84,14 +85,14 @@ $$
 The unconstrained tangency portfolio is proportional to:
 
 $$
-w \propto \Sigma^{-1}\mu_e
+w \propto \Sigma^{-1}\mu
 $$
 
 where:
 
 - $w$ = vector of portfolio weights.
 - $\Sigma^{-1}$ = inverse covariance matrix.
-- $\mu_e$ = vector of expected excess returns.
+- $\mu$ = vector of expected excess returns.
 
 The raw weights are then scaled to target **10% annualized portfolio volatility**.
 
@@ -104,7 +105,10 @@ $$
 Annualized volatility is calculated as:
 
 $$
-\sigma_{p,annual} = \sqrt{252}\sqrt{w^\top \Sigma w}
+\sigma_{p,annual}
+=
+\sqrt{252}
+\sqrt{w^\top \Sigma w}
 $$
 
 The weights are scaled so that:
